@@ -1,14 +1,26 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {Component} from 'react';
+import {View, StyleSheet} from 'react-native';
 
-const App = () => {
-  return ( 
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Hello world</Text>
-      <Text>Hello world</Text>
-      <Text>Hello world</Text>
-    </View>
-   );
+import Header from './components/Header';
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+  render() {
+    return (
+      <View style={styles.container}>
+        <Header />
+      </View>
+    );
+  }
 }
- 
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
 export default App;
